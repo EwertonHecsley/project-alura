@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #acc7e6;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 35%;
+
+}
+
+.container-cabecalho svg {
+    width: 120px;
+    height: 48px;
+    margin: 20px 5px 20px 5px;
+}
+
+h1 {
+    font-size: 35px;
+    color: #0A3871;
+    font-weight: bold;
+}
+
+.container-central {
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+    font-weight: bold;
+}
+
+.container-central-caixaTexto {
+    height: 80%;
+    width: 50%;
+    font-size: 35px;
+    color: #0A3871;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    resize: none;
+    border: none;
+    /* Remove a borda */
+    border-radius: 32px;
+    background: var(--White, #FFF);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    color: #0A3871;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    line-height: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+
+}
+
+.container-central-resposta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72%;
+    width: 50%;
+    margin-top: 40px;
+    margin-right: 80px;
+
+    border-radius: 32px;
+    background: var(--White, #FFF);
+
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.container-central-resposta-quadro {
+    background-color: #FFF;
+}
+
+.container-central-resposta-quadro p,
+h3 {
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    color: #0A3871;
+}
+
+.conteudo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #0A3871;
+    font-size: 25px;
+}
+
+.juntar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    padding-left: 15px;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto {
+    padding-left: 15px;
+}
+
+.btn button {
+    width: 15%;
+    height: 55px;
+    font-size: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#codificar {
+    background-color: #0A3871;
+    color: #FFF;
+}
+
+#decodificar {
+    background-color: #5883b8;
+    color: #FFF;
+}
