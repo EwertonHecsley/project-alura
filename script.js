@@ -45,7 +45,46 @@ function criptografarTexto() {
     const p = document.createElement('p');
     p.textContent = textoCriptografado;
     containerPai.appendChild(p);
+};
+
+// Função para gerar a tabela de substituição inversa
+function gerarTabelaInversa(tabela) {
+    const tabelaInversa = {};
+    for (const chave in tabela) {
+        const valor = tabela[chave];
+        tabelaInversa[valor] = chave;
+    }
+    return tabelaInversa;
 }
+
+const tabelaSubstituicaoInversa = gerarTabelaInversa(tabelaSubstituicao);
+
+function descriptografarTexto() {
+    const textoCriptografado = inputText.value.trim();
+
+    // Dividir o texto criptografado em palavras
+    const palavrasCriptografadas = textoCriptografado.split(' ');
+
+    // Descriptografar cada palavra
+    const palavrasDescriptografadas = palavrasCriptografadas.map(palavraCriptografada => {
+        return tabelaSubstituicaoInversa[palavraCriptografada] || palavraCriptografada;
+    });
+
+    // Unir as palavras descriptografadas
+    const textoDescriptografado = palavrasDescriptografadas.join(' ');
+
+    // Limpar container pai
+    containerPai.innerHTML = '';
+
+    // Adicionar o texto descriptografado ao container pai
+    const p = document.createElement('p');
+    p.textContent = textoDescriptografado;
+    containerPai.appendChild(p);
+}
+
+
+
+
 
 
 
